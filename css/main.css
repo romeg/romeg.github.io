@@ -320,7 +320,7 @@ body {
     .article-container {
         max-width: 650px
     }
-    .gist {
+    .gist, .highlight{
         max-width: 400px
     }
 }
@@ -329,7 +329,7 @@ body {
     .article-container {
         max-width: 850px;
     }
-    .gist {
+    .gist, .highlight {
         max-width: 600px;
     }
 }

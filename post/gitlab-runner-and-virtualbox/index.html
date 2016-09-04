@@ -1,0 +1,160 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        
+
+        <link rel="stylesheet" href="http://maks.me/css/vendor.css">
+        <link rel="stylesheet" href="http://maks.me/css/main.css">
+    </head>
+    <body>
+        
+    <nav class="top-nav">
+        <div class="container-fluid">
+            <div class="logo ">
+                    <a href="/">
+                        <kbd>maks.me</kbd>
+                    </a>
+            </div>
+            <ul class="links clearfix">
+            
+                <li><a href="http://maks.me//">Blog</a></li>
+            
+                <li><a href="http://maks.me//about/">About</a></li>
+            
+            <li><a href="https://twitter.com/Romulus73" class="image-link leftmost"><i class="fa fa-twitter-square"></i></a></li>
+            <li><a href="http://maks.me/index.xml" class="image-link"><i class="fa fa-rss-square"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+  	<section class="article-container article-summaries">
+	        
+          <div class="menu-column">
+            <nav id="toc-of-article" class="article-menu affix-top"></nav>                    
+          </div>
+
+ 
+	        <div class="article-row">
+            <article class="compact-code">
+            	<time datetime="Aug 22, 2016" class="article-time">Aug 22, 2016</time>
+                <header> 
+                    <h1 class="article-title"><a href="http://maks.me/post/gitlab-runner-and-virtualbox/">GitLab CI runner and VirtualBox </a></h1>
+                </header>
+	
+        
+
+<p>Recently, I have been installing such configuration and discover that not a lot documentation exist in Internet. So, I write this post as summary. I think that this is also can be usefull for guys who want install GitLab runner and Virtualbox on headless server using Puppet and automate this provision as much as possible. There are some caveats that requires manual work but it is also can be easily automated.</p>
+
+<h2 id="puppet">Puppet</h2>
+
+<h3 id="modules">Modules</h3>
+
+<p>I used modules from Puppetforge so you can install it using usual process</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>puppet module install vshn-gitlab
+puppet module install danzilio-virtualbox
+</pre></div>
+
+<p>If you are using <kbd>r10k</kbd> for management Puppet modules and code you need to add following modules to your <code>Puppetfile</code>:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #7D9029">mod</span> <span style="color: #BA2121">&#39;vshn/gitlab&#39;</span>, <span style="color: #BA2121">&#39;1.8.0&#39;</span>
+<span style="color: #7D9029">mod</span> <span style="color: #BA2121">&#39;danzilio/virtualbox&#39;</span>, <span style="color: #BA2121">&#39;1.7.1&#39;</span>
+</pre></div>
+
+<p>Do not forget check dependencies:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #7D9029">mod</span> <span style="color: #BA2121">&#39;puppetlabs/stdlib&#39;</span>, <span style="color: #BA2121">&#39;4.12.0&#39;</span>
+<span style="color: #7D9029">mod</span> <span style="color: #BA2121">&#39;puppet/archive&#39;</span>, <span style="color: #BA2121">&#39;1.0.0&#39;</span>
+</pre></div>
+
+<h3 id="configuration">Configuration</h3>
+
+<p>Node definition in my case was like this:</p>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">node</span> <span style="color: #BA2121">&#39;gitlab-runner&#39;</span> {
+	<span style="color: #008000; font-weight: bold">include</span> <span style="color: #7D9029">virtualbox</span>
+	<span style="color: #7D9029">virtualbox</span>::<span style="color: #7D9029">extpack</span> { <span style="color: #BA2121">&#39;Oracle_VM_VirtualBox_Extension_Pack&#39;</span>:
+	  <span style="color: #7D9029">ensure</span>           <span style="color: #666666">=&gt;</span> <span style="color: #008000; font-weight: bold">present</span>,
+	  <span style="color: #7D9029">source</span>           <span style="color: #666666">=&gt;</span> <span style="color: #BA2121">&#39;http://download.virtualbox.org/virtualbox/5.1.2/Oracle_VM_VirtualBox_Extension_Pack-5.1.2-108956.vbox-extpack&#39;</span>,
+	  <span style="color: #7D9029">checksum_string</span>  <span style="color: #666666">=&gt;</span> <span style="color: #BA2121">&#39;7614ce90e17297f80d6a5822252c90d9&#39;</span>,
+	  <span style="color: #7D9029">follow_redirects</span> <span style="color: #666666">=&gt;</span> <span style="color: #008000; font-weight: bold">true</span>,
+	}
+
+	<span style="color: #008000; font-weight: bold">class</span> { <span style="color: #BA2121">&#39;::gitlab::cirunner&#39;</span>:
+	    <span style="color: #7D9029">manage_docker</span> <span style="color: #666666">=&gt;</span> <span style="color: #008000; font-weight: bold">false</span>,
+	}
+
+	<span style="color: #19177C">$runners_hash</span> <span style="color: #666666">=</span> {
+	    <span style="color: #BA2121">&#39;runner_for_virtualbox&#39;</span> <span style="color: #666666">=&gt;</span> {}
+	}
+
+	<span style="color: #19177C">$default_config</span> <span style="color: #666666">=</span> {
+	<span style="color: #BA2121">&#39;url&#39;</span> <span style="color: #666666">=&gt;</span> <span style="color: #BA2121">&quot;https://gitlab.example.com/&quot;</span>,
+	<span style="color: #BA2121">&#39;registration-token&#39;</span> <span style="color: #666666">=&gt;</span> <span style="color: #BA2121">&quot;your_agent_registration_token&quot;</span>,
+	<span style="color: #BA2121">&#39;executor&#39;</span> <span style="color: #666666">=&gt;</span> <span style="color: #BA2121">&quot;virtualbox&quot;</span>
+	}
+
+	<span style="color: #7D9029">gitlab</span>::<span style="color: #7D9029">runner</span> { <span style="color: #BA2121">&#39;runner_for_virtualbox&#39;</span>:
+	    <span style="color: #7D9029">default_config</span> <span style="color: #666666">=&gt;</span> <span style="color: #19177C">$default_config,</span>
+	    <span style="color: #7D9029">runners_hash</span>   <span style="color: #666666">=&gt;</span> <span style="color: #19177C">$runners_hash,</span>
+	    <span style="color: #7D9029">require</span> <span style="color: #666666">=&gt;</span> [<span style="color: #008000; font-weight: bold">Class</span>[<span style="color: #BA2121">&#39;Virtualbox&#39;</span>],<span style="color: #7D9029">Virtualbox</span>::<span style="color: #7D9029">Extpack</span>[<span style="color: #BA2121">&#39;Oracle_VM_VirtualBox_Extension_Pack&#39;</span>]]
+	}
+}
+</pre></div>
+
+<p>Notes:</p>
+
+<ul>
+<li><code>manage_docker</code> should be false, otherwise you need to add docker module and other hustling around docker installation</li>
+<li><kbd>hiera</kbd> wasn&rsquo;t used in this example but all modules support it</li>
+</ul>
+
+<h2 id="virualbox">VirualBox</h2>
+
+<h3 id="extension-pack">Extension Pack</h3>
+
+<p>Most critical remainder, VirtualBox must have Oracle VM VirtualBox extension pack installed otherwise gitlab build&rsquo;s will fail in a strange ways. Such as timeouts, errors and so on.</p>
+
+<p>Other notes:</p>
+
+<ul>
+<li>node what you are trying to use as virtualbox base must have Vt-x enabled (or nested virtualization)</li>
+<li>ensure that nothing blocks VirtualBox networks</li>
+</ul>
+
+<h3 id="base-image">Base image</h3>
+
+<ul>
+<li><kbd>vagrant</kbd> unfortunately doesn&rsquo;t supported by gitlab runner :( See: links.
+As gitlab runner doesn&rsquo;t support vagrant and other types of provisioning VMs you need to<br /></li>
+</ul>
+
+<p>To be finished 8(</p>
+
+
+        
+                </article>
+        </div>
+
+       
+     </section>
+
+
+        <script src="http://maks.me//js/vendor.js"></script>
+        <script src="http://maks.me//js/main.js"></script>
+        
+        
+
+        
+        
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-12694453-4', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    </body>
+</html>

@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('#toc-of-article').DynamicScrollspy({
-		  tH: 3, 
+		  tH: 2, 
   		  bH: 6, 
   		  offset: 100
 	});
