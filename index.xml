@@ -2,211 +2,36 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oh, my blog!</title>
-    <link>http://maks.me/</link>
+    <link>https://maks.me/</link>
     <description>Recent content on Oh, my blog!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
     <lastBuildDate>Wed, 31 Aug 2016 23:34:53 +0400</lastBuildDate>
-    <atom:link href="http://maks.me/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://maks.me/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>About me</title>
-      <link>http://maks.me/about/</link>
+      <link>https://maks.me/about/</link>
       <pubDate>Wed, 31 Aug 2016 23:34:53 +0400</pubDate>
       
-      <guid>http://maks.me/about/</guid>
-      <description>
-
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;http://maks.me/img/w_a46444d8_128x128.jpg&#34; /&gt;
-    
-    
-&lt;/figure&gt;
-
-
-&lt;h1 id=&#34;hi-i-m-maks&#34;&gt;Hi, I&amp;rsquo;m Maks!&lt;/h1&gt;
-
-&lt;p&gt;I hope you find this site helpful. This is me in the oldest cinema in my hometown where I&amp;rsquo;ve been implementing first in town internet booking system from scratch.&lt;/p&gt;
-
-&lt;p&gt;Here are my various contact details if you’d like to get in touch.&lt;/p&gt;
-
-
-    &lt;dl class=&#34;contact dl-horizontal&#34;&gt;
-        &lt;dt&gt;&lt;i class=&#34;fa fa-envelope&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
-        &lt;dd&gt;i at this domain&lt;/dd&gt;
-        &lt;dt&gt;&lt;i class=&#34;fa fa-twitter&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
-        &lt;dd&gt;&lt;a href=&#34;https://twitter.com/Romulus73&#34;&gt;@Romulus73&lt;/a&gt;&lt;/dd&gt;
-        &lt;dt&gt;&lt;i class=&#34;fa fa-github&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
-        &lt;dd&gt;&lt;a href=&#34;https://github.com/scullion&#34;&gt;github.com/romeg&lt;/a&gt;&lt;/dd&gt;
-        &lt;dt&gt;&lt;i class=&#34;fa fa-skype&#34;&gt;&lt;/i&gt;&lt;/dt&gt;
-        &lt;dd&gt;romeg_ul&lt;/dd&gt;
-    &lt;/dl&gt;
-
-
-&lt;h2 id=&#34;need-a-good-sysadmin-devops&#34;&gt;Need a Good Sysadmin/DevOps?&lt;/h2&gt;
-
-&lt;p&gt;I’m a consultant in system administration. You can hire me to build your infrastructure, implement CI/CD for admins or make monitoring for your apps. My areas of expertise are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Configuration management&lt;/strong&gt;
-&lt;br&gt;&lt;small class=&#34;text-muted&#34;&gt;Puppet, r10k, hiera&lt;/small&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Monitoring&lt;/strong&gt;
-&lt;br&gt;&lt;small class=&#34;text-muted&#34;&gt;Zabbix, Prometheus&lt;/small&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cluster management services&lt;/strong&gt;
-&lt;br&gt;&lt;small class=&#34;text-muted&#34;&gt;DCOS, Mesos and Marathon&lt;/small&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;CI/CD&lt;/strong&gt;
-&lt;br&gt;&lt;small class=&#34;text-muted&#34;&gt;Jenkins, TeamCity, GitLab CI&lt;/small&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Programming/scripting&lt;/strong&gt;
-&lt;br&gt;&lt;small class=&#34;text-muted&#34;&gt;Bash, JS(Node.JS), Golang, PHP&lt;/small&gt;&lt;/li&gt;
-&lt;li&gt;Other interesting things:
-&lt;br&gt;&lt;small class=&#34;text-muted&#34;&gt;Docker, Logstash, Elasticsearch, Kibana&lt;/small&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Drop me an email or use the form below to talk about how I can help with your project.&lt;/p&gt;
-
-
-&lt;form id=&#34;contact-form&#34; class=&#34;form-horizontal&#34; action=&#34;&#34; method=&#34;POST&#34;&gt;
-    &lt;input type=&#34;hidden&#34; name=&#34;_subject&#34; value=&#34;maks.me Contact Form&#34;&gt;
-    &lt;input type=&#34;hidden&#34; name=&#34;_next&#34; value=&#34;http://maks.me/about/confirm&#34;&gt;
-    &lt;input type=&#34;text&#34; name=&#34;_gotcha&#34; style=&#34;display: none&#34;&gt;
-
-    &lt;div class=&#34;form-group&#34;&gt;
-        &lt;label class=&#34;col-sm-2&#34; for=&#34;name-input&#34;&gt;Name&lt;/label&gt;
-        &lt;div class=&#34;col-sm-10&#34;&gt;
-            &lt;input id=&#34;name-input&#34; class=&#34;form-control&#34; type=&#34;text&#34; required=&#34;&#34; name=&#34;name&#34; placeholder=&#34;Your name or company&#34;&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;form-group&#34;&gt;
-        &lt;label class=&#34;col-sm-2&#34; for=&#34;email-input&#34;&gt;Email&lt;/label&gt;
-        &lt;div class=&#34;col-sm-10&#34;&gt;
-            &lt;input id=&#34;email-input&#34; class=&#34;form-control&#34; type=&#34;email&#34; required=&#34;&#34; name=&#34;_replyto&#34; placeholder=&#34;your@email&#34;&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&#34;form-group&#34;&gt;
-        &lt;label class=&#34;col-sm-2&#34; for=&#34;question-input&#34;&gt;Query&lt;/label&gt;
-        &lt;div class=&#34;col-sm-10&#34;&gt;
-            &lt;select id=&#34;question-input&#34; class=&#34;form-control&#34; name=&#34;query&#34;&gt;
-                &lt;option&gt;Do you do...?&lt;/option&gt;
-                &lt;option&gt;How much will it cost?&lt;/option&gt;
-                &lt;option&gt;General question&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;  
-    &lt;div class=&#34;form-group&#34;&gt;
-        &lt;label class=&#34;col-sm-2&#34; for=&#34;message-input&#34;&gt;Message&lt;/label&gt;
-        &lt;div class=&#34;col-sm-10&#34;&gt;
-            &lt;textarea id=&#34;message-input&#34; class=&#34;form-control small&#34; name=&#34;message&#34; placeholder=&#34;How can I help?&#34; rows=&#34;4&#34;&gt;&lt;/textarea&gt;
-        &lt;/div&gt; 
-    &lt;/div&gt;
-    &lt;div class=&#34;form-group&#34;&gt;
-        &lt;div class=&#34;col-sm-10 col-sm-offset-2&#34;&gt;
-            &lt;button type=&#34;submit&#34; id=&#34;send-button&#34; class=&#34;btn btn-default&#34; data-sending-text=&#34;&amp;lt;i class=&amp;quot;fa fa-circle-o-notch fa-spin&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; Sending...&#34; data-sent-text=&#34;&amp;lt;i class=&amp;quot;fa fa-thumbs-o-up&amp;quot;&amp;gt;&amp;lt;/i&amp;gt; Sent&#34;&gt;&lt;i class=&#34;fa fa-paper-plane-o&#34;&gt;&lt;/i&gt; Send&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div id=&#34;success-alert&#34; class=&#34;alert alert-success col-sm-12&#34; role=&#34;alert&#34; style=&#34;display: none&#34;&gt;
-        &lt;strong&gt;&lt;i class=&#34;fa fa-thumbs-o-up&#34;&gt;&lt;/i&gt; Thanks for your question.&lt;/strong&gt; I&#39;ll respond as soon as I can.
-    &lt;/div&gt;
-&lt;/form&gt;
-
-
-</description>
+      <guid>https://maks.me/about/</guid>
+      <description>Hi, I&amp;rsquo;m Maks! I hope you find this site helpful. This is me in the oldest cinema in my hometown where I&amp;rsquo;ve been implementing first in town internet booking system from scratch.
+Here are my various contact details if you’d like to get in touch.
+ i at this domain  @Romulus73  github.com/romeg  romeg_ul  Need a Good Sysadmin/DevOps? I’m a consultant in system administration. You can hire me to build your infrastructure, implement CI/CD for admins or make monitoring for your apps.</description>
     </item>
     
     <item>
       <title>GitLab CI runner and VirtualBox </title>
-      <link>http://maks.me/post/gitlab-runner-and-virtualbox/</link>
+      <link>https://maks.me/post/gitlab-runner-and-virtualbox/</link>
       <pubDate>Mon, 22 Aug 2016 12:59:02 +0400</pubDate>
       
-      <guid>http://maks.me/post/gitlab-runner-and-virtualbox/</guid>
-      <description>
+      <guid>https://maks.me/post/gitlab-runner-and-virtualbox/</guid>
+      <description>&lt;p&gt;Recently, I have been installing such configuration and discover that not a lot documentation exist in Internet. So, I write this post as summary. I think that this is also can be usefull for guys who want install GitLab runner and Virtualbox on headless server using Puppet and automate this provision as much as possible. There are some caveats that requires manual work but it is also can be easily automated.&lt;/p&gt;
 
-&lt;p&gt;Recently, I have been installing such configuration and discover that not a lot documentation exist in Internet. So, I write this post as summary. I think that this is also can be usefull for guys who want install GitLab runner and Virtualbox on headless server using Puppet and automate this provision as much as possible. There are some caveats that requires manual work but it is also can be easily automated.&lt;/p&gt;
-
-&lt;h2 id=&#34;puppet&#34;&gt;Puppet&lt;/h2&gt;
-
-&lt;h3 id=&#34;modules&#34;&gt;Modules&lt;/h3&gt;
-
-&lt;p&gt;I used modules from Puppetforge so you can install it using usual process&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;puppet module install vshn-gitlab
-puppet module install danzilio-virtualbox
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;If you are using &lt;kbd&gt;r10k&lt;/kbd&gt; for management Puppet modules and code you need to add following modules to your &lt;code&gt;Puppetfile&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #7D9029&#34;&gt;mod&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;vshn/gitlab&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;1.8.0&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color: #7D9029&#34;&gt;mod&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;danzilio/virtualbox&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;1.7.1&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Do not forget check dependencies:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #7D9029&#34;&gt;mod&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;puppetlabs/stdlib&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;4.12.0&amp;#39;&lt;/span&gt;
-&lt;span style=&#34;color: #7D9029&#34;&gt;mod&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;puppet/archive&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;1.0.0&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
-
-&lt;p&gt;Node definition in my case was like this:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34; style=&#34;background: #f8f8f8&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;node&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;gitlab-runner&amp;#39;&lt;/span&gt; {
-	&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;include&lt;/span&gt; &lt;span style=&#34;color: #7D9029&#34;&gt;virtualbox&lt;/span&gt;
-	&lt;span style=&#34;color: #7D9029&#34;&gt;virtualbox&lt;/span&gt;::&lt;span style=&#34;color: #7D9029&#34;&gt;extpack&lt;/span&gt; { &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;Oracle_VM_VirtualBox_Extension_Pack&amp;#39;&lt;/span&gt;:
-	  &lt;span style=&#34;color: #7D9029&#34;&gt;ensure&lt;/span&gt;           &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;present&lt;/span&gt;,
-	  &lt;span style=&#34;color: #7D9029&#34;&gt;source&lt;/span&gt;           &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;http://download.virtualbox.org/virtualbox/5.1.2/Oracle_VM_VirtualBox_Extension_Pack-5.1.2-108956.vbox-extpack&amp;#39;&lt;/span&gt;,
-	  &lt;span style=&#34;color: #7D9029&#34;&gt;checksum_string&lt;/span&gt;  &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;7614ce90e17297f80d6a5822252c90d9&amp;#39;&lt;/span&gt;,
-	  &lt;span style=&#34;color: #7D9029&#34;&gt;follow_redirects&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;true&lt;/span&gt;,
-	}
-
-	&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;class&lt;/span&gt; { &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;::gitlab::cirunner&amp;#39;&lt;/span&gt;:
-	    &lt;span style=&#34;color: #7D9029&#34;&gt;manage_docker&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;false&lt;/span&gt;,
-	}
-
-	&lt;span style=&#34;color: #19177C&#34;&gt;$runners_hash&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; {
-	    &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;runner_for_virtualbox&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; {}
-	}
-
-	&lt;span style=&#34;color: #19177C&#34;&gt;$default_config&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&lt;/span&gt; {
-	&lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;url&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;https://gitlab.example.com/&amp;quot;&lt;/span&gt;,
-	&lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;registration-token&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;your_agent_registration_token&amp;quot;&lt;/span&gt;,
-	&lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;executor&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;quot;virtualbox&amp;quot;&lt;/span&gt;
-	}
-
-	&lt;span style=&#34;color: #7D9029&#34;&gt;gitlab&lt;/span&gt;::&lt;span style=&#34;color: #7D9029&#34;&gt;runner&lt;/span&gt; { &lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;runner_for_virtualbox&amp;#39;&lt;/span&gt;:
-	    &lt;span style=&#34;color: #7D9029&#34;&gt;default_config&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #19177C&#34;&gt;$default_config,&lt;/span&gt;
-	    &lt;span style=&#34;color: #7D9029&#34;&gt;runners_hash&lt;/span&gt;   &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color: #19177C&#34;&gt;$runners_hash,&lt;/span&gt;
-	    &lt;span style=&#34;color: #7D9029&#34;&gt;require&lt;/span&gt; &lt;span style=&#34;color: #666666&#34;&gt;=&amp;gt;&lt;/span&gt; [&lt;span style=&#34;color: #008000; font-weight: bold&#34;&gt;Class&lt;/span&gt;[&lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;Virtualbox&amp;#39;&lt;/span&gt;],&lt;span style=&#34;color: #7D9029&#34;&gt;Virtualbox&lt;/span&gt;::&lt;span style=&#34;color: #7D9029&#34;&gt;Extpack&lt;/span&gt;[&lt;span style=&#34;color: #BA2121&#34;&gt;&amp;#39;Oracle_VM_VirtualBox_Extension_Pack&amp;#39;&lt;/span&gt;]]
-	}
-}
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Notes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;manage_docker&lt;/code&gt; should be false, otherwise you need to add docker module and other hustling around docker installation&lt;/li&gt;
-&lt;li&gt;&lt;kbd&gt;hiera&lt;/kbd&gt; wasn&amp;rsquo;t used in this example but all modules support it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;virualbox&#34;&gt;VirualBox&lt;/h2&gt;
-
-&lt;h3 id=&#34;extension-pack&#34;&gt;Extension Pack&lt;/h3&gt;
-
-&lt;p&gt;Most critical remainder, VirtualBox must have Oracle VM VirtualBox extension pack installed otherwise gitlab build&amp;rsquo;s will fail in a strange ways. Such as timeouts, errors and so on.&lt;/p&gt;
-
-&lt;p&gt;Other notes:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;node what you are trying to use as virtualbox base must have Vt-x enabled (or nested virtualization)&lt;/li&gt;
-&lt;li&gt;ensure that nothing blocks VirtualBox networks&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;base-image&#34;&gt;Base image&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;kbd&gt;vagrant&lt;/kbd&gt; unfortunately doesn&amp;rsquo;t supported by gitlab runner :( See: links.
-As gitlab runner doesn&amp;rsquo;t support vagrant and other types of provisioning VMs you need to&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;To be finished 8(&lt;/p&gt;
-</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
